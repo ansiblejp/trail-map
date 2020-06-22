@@ -2,7 +2,7 @@ Ansibleを実践的に活用する上で有用な情報をこちらのページ�
 みなさんが有用だと思った情報もPull Requestから追記ください。
 
 # 書籍
-- [Ansible構築・運用ガイドブック ~インフラ自動化のための現場のノウハウ~](https://www.amazon.co.jp/dp/4839969388/)
+- [Ansible構築・運用ガイドブック 〜インフラ自動化のための現場のノウハウ〜](https://www.amazon.co.jp/dp/4839969388/)
 - [Ansible実践ガイド 第3版](https://www.amazon.co.jp/dp/4295007641/)
 
 # ブログやウェブサイト
