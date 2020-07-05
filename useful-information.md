@@ -11,9 +11,7 @@ Ansibleを実践的に活用する上で有用な情報をこちらのページ�
 - [Ansible Advent Calendar 2019](https://qiita.com/advent-calendar/2019/ansible)
 - [Ansible Advent Calendar 2018](https://qiita.com/advent-calendar/2018/ansible)
 - [Red Hat 赤帽ブログ](https://rheb.hatenablog.com/archive/category/Ansible)
-
-# Ansible Trail-map
-- [Trail-map top](https://www.redhat.com/ja/explore/ansible/trailmap)
+- [Ansible トレイルマップ](https://www.redhat.com/ja/explore/ansible/trailmap)
 
 
 ※ブログやウェブサイトの情報を活用する上での注意点
