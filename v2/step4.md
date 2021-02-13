@@ -1,7 +1,7 @@
 # 環境を準備する
 
 本ドキュメントは [Ansible Trail Map 牡丹山]() の一部となります。
-Red Hat Ansible Automation Platform の環境を構築し、自動化のボタン化の準備を整えます。
+Red Hat Ansible Automation Platform の環境を構築し、自動化のボタン化の準備を整えます。ここで構築する環境は体験とデモを目的としておりますので、本番の自動化環境としては利用しないでください。
 
 ## 必要な環境
 
@@ -46,18 +46,18 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 ### RHELの例
 
 [https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux) へアクセスし、「無料で試用する」をクリックします。
-![./images/subs-rhel1.png](./images/subs-rhel1.png)
+<img src="./images/subs-rhel1.png" width=50%>
 
 「START YOUR TRIAL」をクリックします。
-![./images/subs-rhel2.png](./images/subs-rhel2.png)
+<img src="./images/subs-rhel2.png" width=50%>
 
 ログインが求められますので、作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
-![./images/subs-rhel3.png](./images/subs-rhel3.png)
+<img src="./images/subs-rhel3.png" width=50%>
 
 取得した試用版は Red Hat Customer Portal から確認することができます。
-![./images/subs-rhel4.png](./images/subs-rhel4.png)
+<img src="./images/subs-rhel4.png" width=50%>
 
-Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。
+Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。2つの試用サブスクリプションが取得できたらインストールの準備は完了です。
 
 ## RHELのインストール
 
