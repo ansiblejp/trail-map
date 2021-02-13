@@ -46,16 +46,24 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 ### RHELの例
 
 [https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux) へアクセスし、「無料で試用する」をクリックします。
+
 <img src="./images/subs-rhel1.png" width=50%>
 
+
 「START YOUR TRIAL」をクリックします。
+
 <img src="./images/subs-rhel2.png" width=50%>
 
+
 ログインが求められますので、作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
+
 <img src="./images/subs-rhel3.png" width=50%>
 
+
 取得した試用版は Red Hat Customer Portal から確認することができます。
+
 <img src="./images/subs-rhel4.png" width=50%>
+
 
 Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。2つの試用サブスクリプションが取得できたらインストールの準備は完了です。
 
