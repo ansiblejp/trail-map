@@ -22,11 +22,11 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 
 ## 進め方の概要
 
-1. Red Hat Customer Portal のアカウントを作成する
-1. Red Hat Enterprise Linux(以下RHEL) と Red Hat Ansible Automation Platform の試用サブスクリプションを取得する
-1. RHELをインストールする
-1. Red Hat Ansible Automation Platform をインストールする
-1. 動作確認
+1. [Red Hat Customer Portal のアカウントを作成する](#Red-Hat-Customer-Portal-のアカウントを作成する)
+1. [Red Hat Enterprise Linux(以下RHEL) と Red Hat Ansible Automation Platform の試用サブスクリプションを取得する](#試用サブスクリプションを取得する)
+1. [RHELをインストールする](#RHELのインストール)
+1. [Red Hat Ansible Automation Platform をインストールする](#Red-Hat-Ansible-Automation-Platform-のインストール)
+1. [動作確認](#動作確認)
 
 
 ## Red Hat Customer Portal のアカウントを作成する
