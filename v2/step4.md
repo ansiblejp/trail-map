@@ -50,23 +50,25 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 <img src="./images/subs-rhel1.png" width=50%>
 
 
+### STEP1
 「START YOUR TRIAL」をクリックします。
 
 <img src="./images/subs-rhel2.png" width=50%>
 
 
+### STEP2
 ログインが求められますので、作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
 
 <img src="./images/subs-rhel3.png" width=50%>
 
-
+### STEP3
 取得に成功するとインストールメディアのダウンロードが始まります。始まらない場合はリンクをクリックしてインストールメディアを取得しましょう。
 
 > Note: ここでダウンロードされるRHELのインストールメディアの容量は8GB前後になるため、モバイル回線を使用している方は注意してください。
 
 <img src="./images/subs-rhel4.png" width=50%>
 
-2021/2/14時点では以下のファイルがダウンロードされます。後続のインストール
+2021/2/14時点では以下のファイルがダウンロードされます。後続のインストール手順の中で利用します。
 
 RHELのインストールメディア
 ```
@@ -79,12 +81,14 @@ Red Hat Ansible Automation Platform のインストールファイル
 ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
 ```
 
-取得した試用版は Red Hat Customer Portal から確認することができます。
+### STEP4
+取得した試用版は Red Hat Customer Portal から確認することができます。以下の例ではRHELの試用サブスクリプションが割り当てられています。
 
 <img src="./images/subs-rhel5.png" width=50%>
 
-
+### STEP5
 Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。2つの試用サブスクリプションが取得できたらインストールの準備は完了です。
+
 
 ## RHELのインストール
 
