@@ -1,6 +1,6 @@
 # 環境を準備する
 
-本ドキュメントは [Ansible Trail Map 牡丹山]() の一部となります。
+本ドキュメントは [Ansible Trail Map 牡丹山](https://www.redhat.com/ja/explore/ansible/trailmap) の一部となります。
 Red Hat Ansible Automation Platform の環境を構築し、自動化のボタン化の準備を整えます。ここで構築する環境は体験とデモを目的としておりますので、本番の自動化環境としては利用しないでください。
 
 ## 必要な環境
