@@ -239,7 +239,7 @@ pg_sslmode='prefer'  # set to 'verify-full' for client-side enforced SSL
 ```
 
 ### STEP3
-インストールを開始します。
+インストールを開始します。成功すると最後に `successfully` と表示されます。
 
 ```
 [root@localhost ansible-automation-platform-setup-bundle-1.2.1-1]# ./setup.sh
@@ -297,6 +297,18 @@ fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unable to start servic
 <img src="./images/install-tower4.png" width=50%>
 
 ## 動作確認
+最後に簡単な動作確認を行います。Towerではデモ用のジョブが作成されていますので、これを動かしてみます。
 
-(作成中)
+このデモジョブの動作の概要は以下です。
+- Tower サーバー自身対して
+- https://github.com/ansible/ansible-tower-samples の `hello_world.yml` を実行する
 
+### STEP1
+左メニューの「テンプレート」を選択し、「Demo Job Template」の右側の「ロケット」アイコンをクリックします。これでジョブが起動できます。
+
+<img src="./images/tower-demo1.png" width=50%>
+
+### STEP2
+ジョブが起動すると実行結果が表示されます。これが完了すればセットアップは成功です！
+
+<img src="./images/tower-demo2.png" width=50%>
