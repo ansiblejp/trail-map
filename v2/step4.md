@@ -75,12 +75,6 @@ RHELのインストールメディア
 rhel-8.3-x86_64-dvd.iso
 ```
 
-
-Red Hat Ansible Automation Platform のインストールファイル
-```
-ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
-```
-
 ### STEP4
 取得した試用版は Red Hat Customer Portal から確認することができます。以下の例ではRHELの試用サブスクリプションが割り当てられています。
 
@@ -89,42 +83,68 @@ ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
 ### STEP5
 Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。2つの試用サブスクリプションが取得できたらインストールの準備は完了です。
 
+2021/2/14時点では以下のファイルがダウンロードされます。
+
+Red Hat Ansible Automation Platform のインストールファイル
+```
+ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
+```
+
 
 ## RHELのインストール
 
 お使いのハイパーバイザーに合わせて仮想マシンを作成し、ダウンロードしたインストールメディアから起動するように設定してください。仮想マシンを起動するとインストーラーが起動します。
 
+### STEP1
+はじめに言語を選択します。
 
 <img src="./images/install-rhel1.png" width=50%>
 
+### STEP2
+インストール設定を行います。
 
 <img src="./images/install-rhel2.png" width=50%>
 
+### STEP3
+ネットワークを有効化します。
 
 <img src="./images/install-rhel3.png" width=50%>
 
+### STEP4
+タイムゾーンを設定します。
 
 <img src="./images/install-rhel4.png" width=50%>
 
+### STEP5
+ディスクの設定を行います。まず「カスタム」を選択し「完了」をクリックします。
 
 <img src="./images/install-rhel5.png" width=50%>
 
+### STEP6
+パーティション作成で「LVM」を選択して「ここをクリックすると自動的に作成します」をクリックします。
 
 <img src="./images/install-rhel6.png" width=50%>
 
+### STEP7
+パーティションが作成されます。「/boot」「swap」「/」が配置されることを確認します。もし異なるレイアウトになった場合は以下の画像のように調整してください。確認・調整したら「完了」をクリックします。
 
 <img src="./images/install-rhel7.png" width=50%>
 
+### STEP8
+ソフトウェアの選択では「最小限のインストール」を選択します。
 
 <img src="./images/install-rhel8.png" width=50%>
 
+### STEP9
+最後に root ユーザーのパスワードを設定し、インストールを開始してください。
 
 <img src="./images/install-rhel9.png" width=50%>
 
-
+### STEP10
 インストールが終了したら仮想マシンが再起動されます。ログイン可能な状態になったら root ユーザーでログインしてください。
 
-まずインストールしたRHELに試用サブスクリプションを関連付けます。まず以下のコマンドを実行してCustomer PortalとRHELを接続します。xxxx, yyyy の部分にはCustomer Portalのユーザー名とパスワードを指定してください。
+### STEP11
+インストールしたRHELに試用サブスクリプションを関連付けます。まず以下のコマンドを実行してCustomer PortalとRHELを接続します。xxxx, yyyy の部分にはCustomer Portalのユーザー名とパスワードを指定してください。
 ```bash
 [root@localhost ~]# subscription-manager register --username='xxxx' --password='yyyy'
 登録中: subscription.rhsm.redhat.com:443/subscription
@@ -178,7 +198,10 @@ SKU:                      RH00065
 ```
 
 ## Red Hat Ansible Automation Platform のインストール
+ここからは Red Hat Ansible Automation Platform のインストールを行います。
 
+### STEP1
+インストールファイルの `ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz` をサーバーにコピーし、ファイルを展開します。以下は /root へコピーしたあとの操作です。
 
 ```
 [root@localhost ~]# tar zxvf ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
@@ -187,10 +210,14 @@ SKU:                      RH00065
 README.md  backup.yml  bundle  collections  group_vars  install.yml  inventory  licenses  rekey.yml  restore.yml  roles  setup.sh
 ```
 
+### STEP2
+インストーラーの設定ファイル `inventory` を編集します。
+
 ```
 [root@localhost ansible-automation-platform-setup-bundle-1.2.1-1]# vi inventory
 ```
 
+以下のように編集します。設定する場所は `admin_password` `pg_password` になります。ここにパスワードを入力します。このパスワードは起動した Red Hat Ansible Automation Platform のログインに使用します。
 ```
 [tower]
 localhost ansible_connection=local
@@ -211,6 +238,9 @@ pg_password='pass-ansible-tower'
 pg_sslmode='prefer'  # set to 'verify-full' for client-side enforced SSL
 ```
 
+### STEP3
+インストールを開始します。
+
 ```
 [root@localhost ansible-automation-platform-setup-bundle-1.2.1-1]# ./setup.sh
 
@@ -224,8 +254,7 @@ Updating Subscription Management repositories.
 インストール:
  ansible                           noarch              2.9.15-1.el8ae               @commandline                                   17 M
  sshpass                           x86_64              1.06-3.el8ae                 @commandline                                   27 k
- 
- 
+(省略)
  
 PLAY RECAP *****************************************************************************************************************************
 localhost                  : ok=176  changed=76   unreachable=0    failed=0    skipped=85   rescued=0    ignored=2
@@ -234,24 +263,36 @@ The setup process completed successfully.
 Setup log saved to /var/log/tower/setup-2021-02-14-22:39:03.log.
 ```
 
+> Note: インストール中に以下のエラーが出た場合
 
 ```
 TASK [postgres : Make sure PostgreSQL is started] **************************************************************************************
 fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unable to start service postgresql: Job for postgresql.service failed because the control process exited with error code.\nSee \"systemctl status postgresql.service\" and \"journalctl -xe\" for details.\n"}
 ```
 
+下記のコマンドを実行して不足のパッケージを導入し、その後 `./setup.sh` を再び実行してください。
 ```
 [root@localhost ansible-automation-platform-setup-bundle-1.2.1-1]# dnf install glibc-langpack-en
 ```
 
+### STEP4
+インストールが完了したらブラウザでサーバーのIPアドレスへアクセスします。ログイン画面が表示されます。ユーザー名は「admin」、パスワードは先程 `inventory` ファイルに設定したものになります。
+
 <img src="./images/install-tower1.png" width=50%>
 
+### STEP5
+初回ログインを行うとサブスクリプションの設定画面が表示されます。この右側のユーザー名、パスワードの部分に Customer Portal のログイン情報を入力して「サブスクリプションの取得」をクリックします。
 
 <img src="./images/install-tower2.png" width=50%>
 
+### STEP6
+入力したCustomer Portalのアカウントに関連した Red Hat Ansible Automation Platform のサブスクリプションが表示されますので、試用サブスクリプションを選択します。
 
 <img src="./images/install-tower3.png" width=50%>
 
+
+### STEP7
+サブスクリプションの設定画面を終了すると、Tower の初期画面が表示されます。これでインストールは完了となります。
 
 <img src="./images/install-tower4.png" width=50%>
 
