@@ -47,26 +47,26 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 
 [https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux) へアクセスし、「無料で試用する」をクリックします。
 
-<img src="./images/subs-rhel1.png" width=50%>
+<img src="./images/step4/subs-rhel1.png" width=50%>
 
 
 ### STEP1
 「START YOUR TRIAL」をクリックします。
 
-<img src="./images/subs-rhel2.png" width=50%>
+<img src="./images/step4/subs-rhel2.png" width=50%>
 
 
 ### STEP2
 ログインが求められますので、作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
 
-<img src="./images/subs-rhel3.png" width=50%>
+<img src="./images/step4/subs-rhel3.png" width=50%>
 
 ### STEP3
 取得に成功するとインストールメディアのダウンロードが始まります。始まらない場合はリンクをクリックしてインストールメディアを取得しましょう。
 
 > Note: ここでダウンロードされるRHELのインストールメディアの容量は8GB前後になるため、モバイル回線を使用している方は注意してください。
 
-<img src="./images/subs-rhel4.png" width=50%>
+<img src="./images/step4/subs-rhel4.png" width=50%>
 
 2021/2/14時点では以下のファイルがダウンロードされます。後続のインストール手順の中で利用します。
 
@@ -78,7 +78,7 @@ rhel-8.3-x86_64-dvd.iso
 ### STEP4
 取得した試用版は Red Hat Customer Portal から確認することができます。以下の例ではRHELの試用サブスクリプションが割り当てられています。
 
-<img src="./images/subs-rhel5.png" width=50%>
+<img src="./images/step4/subs-rhel5.png" width=50%>
 
 ### STEP5
 Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。2つの試用サブスクリプションが取得できたらインストールの準備は完了です。
@@ -98,47 +98,47 @@ ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
 ### STEP1
 はじめに言語を選択します。
 
-<img src="./images/install-rhel1.png" width=50%>
+<img src="./images/step4/install-rhel1.png" width=50%>
 
 ### STEP2
 インストール設定を行います。
 
-<img src="./images/install-rhel2.png" width=50%>
+<img src="./images/step4/install-rhel2.png" width=50%>
 
 ### STEP3
 ネットワークを有効化します。
 
-<img src="./images/install-rhel3.png" width=50%>
+<img src="./images/step4/install-rhel3.png" width=50%>
 
 ### STEP4
 タイムゾーンを設定します。
 
-<img src="./images/install-rhel4.png" width=50%>
+<img src="./images/step4/install-rhel4.png" width=50%>
 
 ### STEP5
 ディスクの設定を行います。まず「カスタム」を選択し「完了」をクリックします。
 
-<img src="./images/install-rhel5.png" width=50%>
+<img src="./images/step4/install-rhel5.png" width=50%>
 
 ### STEP6
 パーティション作成で「LVM」を選択して「ここをクリックすると自動的に作成します」をクリックします。
 
-<img src="./images/install-rhel6.png" width=50%>
+<img src="./images/step4/install-rhel6.png" width=50%>
 
 ### STEP7
 パーティションが作成されます。「/boot」「swap」「/」が配置されることを確認します。もし異なるレイアウトになった場合は以下の画像のように調整してください。確認・調整したら「完了」をクリックします。
 
-<img src="./images/install-rhel7.png" width=50%>
+<img src="./images/step4/install-rhel7.png" width=50%>
 
 ### STEP8
 ソフトウェアの選択では「最小限のインストール」を選択します。
 
-<img src="./images/install-rhel8.png" width=50%>
+<img src="./images/step4/install-rhel8.png" width=50%>
 
 ### STEP9
 最後に root ユーザーのパスワードを設定し、インストールを開始してください。
 
-<img src="./images/install-rhel9.png" width=50%>
+<img src="./images/step4/install-rhel9.png" width=50%>
 
 ### STEP10
 インストールが終了したら仮想マシンが再起動されます。ログイン可能な状態になったら root ユーザーでログインしてください。
@@ -278,23 +278,23 @@ fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unable to start servic
 ### STEP4
 インストールが完了したらブラウザでサーバーのIPアドレスへアクセスします。ログイン画面が表示されます。ユーザー名は「admin」、パスワードは先程 `inventory` ファイルに設定したものになります。
 
-<img src="./images/install-tower1.png" width=50%>
+<img src="./images/step4/install-tower1.png" width=50%>
 
 ### STEP5
 初回ログインを行うとサブスクリプションの設定画面が表示されます。この右側のユーザー名、パスワードの部分に Customer Portal のログイン情報を入力して「サブスクリプションの取得」をクリックします。
 
-<img src="./images/install-tower2.png" width=50%>
+<img src="./images/step4/install-tower2.png" width=50%>
 
 ### STEP6
 入力したCustomer Portalのアカウントに関連した Red Hat Ansible Automation Platform のサブスクリプションが表示されますので、試用サブスクリプションを選択します。
 
-<img src="./images/install-tower3.png" width=50%>
+<img src="./images/step4/install-tower3.png" width=50%>
 
 
 ### STEP7
 サブスクリプションの設定画面を終了すると、Tower の初期画面が表示されます。これでインストールは完了となります。
 
-<img src="./images/install-tower4.png" width=50%>
+<img src="./images/step4/install-tower4.png" width=50%>
 
 ## 動作確認
 最後に簡単な動作確認を行います。Towerではデモ用のジョブが作成されていますので、これを動かしてみます。
@@ -306,9 +306,9 @@ fatal: [localhost]: FAILED! => {"changed": false, "msg": "Unable to start servic
 ### STEP1
 左メニューの「テンプレート」を選択し、「Demo Job Template」の右側の「ロケット」アイコンをクリックします。これでジョブが起動できます。
 
-<img src="./images/tower-demo1.png" width=50%>
+<img src="./images/step4/tower-demo1.png" width=50%>
 
 ### STEP2
 ジョブが起動すると実行結果が表示されます。これが完了すればセットアップは成功です！
 
-<img src="./images/tower-demo2.png" width=50%>
+<img src="./images/step4/tower-demo2.png" width=50%>
