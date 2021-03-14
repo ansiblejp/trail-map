@@ -3,13 +3,22 @@
 本ドキュメントは [Ansible Trail Map 牡丹山](https://www.redhat.com/ja/explore/ansible/trailmap) の一部となります。
 Red Hat Ansible Automation Platform の環境を構築し、自動化のボタン化の準備を整えます。ここで構築する環境は体験とデモを目的としておりますので、本番の自動化環境としては利用しないでください。
 
+## 進め方の概要
+
+1. [必要な環境](#必要な環境)
+1. [Red Hat Customer Portal のアカウントを作成する](#Red-Hat-Customer-Portal-のアカウントを作成する)
+1. [Red Hat Enterprise Linux(以下RHEL) と Red Hat Ansible Automation Platform の試用サブスクリプションを取得する](#試用サブスクリプションを取得する)
+1. [RHELをインストールする](#RHELのインストール)
+1. [Red Hat Ansible Automation Platform をインストールする](#Red-Hat-Ansible-Automation-Platform-のインストール)
+1. [動作確認](#動作確認)
+
 ## 必要な環境
 
-ここでは仮想環境の中で Red Hat Ansible Automation Platform を構築します。仮想環境は自分の環境に適したものを選択してください。
+ここでは仮想環境の中で Red Hat Ansible Automation Platform を構築します。下記を確認し仮想環境は自分の環境に適したものを選択してください。
 
 - 仮想マシンを起動できるノートPCやサーバー
   - x86_64アーキテクチャ
-  - VirtualBox, VMware, KVM 等
+  - VirtualBox, VMware, KVM, Hyper-V 等
 
 - 仮想マシンの必要スペック
   - vCPU: 2core以上
@@ -19,14 +28,6 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 
 - その他の必要物
   - Red Hat Customer Portal のアカウントを作成するためのメールアドレス
-
-## 進め方の概要
-
-1. [Red Hat Customer Portal のアカウントを作成する](#Red-Hat-Customer-Portal-のアカウントを作成する)
-1. [Red Hat Enterprise Linux(以下RHEL) と Red Hat Ansible Automation Platform の試用サブスクリプションを取得する](#試用サブスクリプションを取得する)
-1. [RHELをインストールする](#RHELのインストール)
-1. [Red Hat Ansible Automation Platform をインストールする](#Red-Hat-Ansible-Automation-Platform-のインストール)
-1. [動作確認](#動作確認)
 
 
 ## Red Hat Customer Portal のアカウントを作成する
