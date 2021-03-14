@@ -38,35 +38,30 @@ Red Hat Ansible Automation Platform の環境を構築し、自動化のボタ�
 
 ## 試用サブスクリプションを取得する
 
-次に作成したアカウントに試用版のサブスクリプションを関連付けます。以下のサイトから簡単に取得することが可能です。それぞれのページで「無料で試用する」や「無料で試す」を選択します。手続きの途中でログインを求められる場合がありますので、先程作成した Red Hat Customer Portal のアカウントを入力してください。
+次に作成したアカウントで試用版のサブスクリプションを取得します。以下のサイトから簡単に取得することが可能です。手続きの途中でログインを求められる場合がありますので、先程作成した Red Hat Customer Portal のアカウントを入力してください。
 
-- [RHELの試用サブスクリプションを取得する](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux)
-- [Red Hat Ansible Automation Platform の試用サブスクリプションを取得する](https://www.redhat.com/ja/technologies/management/ansible)
+- [RHELの試用サブスクリプションを取得する](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux/try-it?sc_cid=7013a000002vp2NAAQ){:target="_blank"}
+- [Red Hat Ansible Automation Platform の試用サブスクリプションを取得する](https://www.redhat.com/ja/technologies/management/ansible/try-it?sc_cid=7013a000002vp2NAAQ){:target="_blank"}
 
-### RHELの例
+### RHELの試用サブスクリプションの取得
 
-[https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux) へアクセスし、「無料で試用する」をクリックします。
+#### STEP1
+こちらの[リンク](https://www.redhat.com/ja/technologies/linux-platforms/enterprise-linux/try-it?sc_cid=7013a000002vp2NAAQ){:target="_blank"}を開いて、「START YOUR TRIAL」をクリックします。
 
 <img src="./images/step4/subs-rhel1.png" width=50%>
 
 
-### STEP1
-「START YOUR TRIAL」をクリックします。
+#### STEP2
+ログインが求めらた場合は、先程作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
 
 <img src="./images/step4/subs-rhel2.png" width=50%>
 
-
-### STEP2
-ログインが求められますので、作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
-
-<img src="./images/step4/subs-rhel3.png" width=50%>
-
-### STEP3
+#### STEP3
 取得に成功するとインストールメディアのダウンロードが始まります。始まらない場合はリンクをクリックしてインストールメディアを取得しましょう。
 
 > Note: ここでダウンロードされるRHELのインストールメディアの容量は8GB前後になるため、モバイル回線を使用している方は注意してください。
 
-<img src="./images/step4/subs-rhel4.png" width=50%>
+<img src="./images/step4/subs-rhel3.png" width=50%>
 
 2021/2/14時点では以下のファイルがダウンロードされます。後続のインストール手順の中で利用します。
 
@@ -75,20 +70,34 @@ RHELのインストールメディア
 rhel-8.3-x86_64-dvd.iso
 ```
 
-### STEP4
-取得した試用版は Red Hat Customer Portal から確認することができます。以下の例ではRHELの試用サブスクリプションが割り当てられています。
+### Red Hat Ansible Automation Platfromの試用サブスクリプションの取得
 
-<img src="./images/step4/subs-rhel5.png" width=50%>
+#### STEP1
+こちらの[リンク](https://www.redhat.com/ja/technologies/management/ansible/try-it?sc_cid=7013a000002vp2NAAQ){:target="_blank"}を開いて、「START YOUR TRIAL」をクリックします。
 
-### STEP5
-Red Hat Ansible Automation Platform もほぼ同様の手順となります。こちらも取得後にRed Hat Customer Portal から試用サブスクリプションが確認できます。2つの試用サブスクリプションが取得できたらインストールの準備は完了です。
+<img src="./images/step4/subs-rhaap1.png" width=50%>
 
-2021/2/14時点では以下のファイルがダウンロードされます。
+#### STEP2
+ログインが求めらた場合は、先程作成した Red Hat Customer Portal のアカウントでログインしてください。その後、ライセンスへの同意を求められますので内容を確認してから同意すると試用サブスクリプションが取得できます。
+
+<img src="./images/step4/subs-rhaap2.png" width=50%>
+
+#### STEP3
+取得に成功するとインストールメディアのダウンロードが始まります。始まらない場合はリンクをクリックしてインストールメディアを取得しましょう。
+
+<img src="./images/step4/subs-rhaap3.png" width=50%>
+
+2021/2/14時点では以下のファイルがダウンロードされます。後続のインストール手順の中で利用します。
 
 Red Hat Ansible Automation Platform のインストールファイル
 ```
 ansible-automation-platform-setup-bundle-1.2.1-1.tar.gz
 ```
+
+### 取得したサブスクリプションの確認
+取得した試用版は Red Hat Customer Portal から確認することができます。以下の例ではRHELの試用サブスクリプションが割り当てられています。Red Hat Ansible Automation Platfrom も取得するとここに表示されます。
+
+<img src="./images/step4/subs-check1.png" width=50%>
 
 
 ## RHELのインストール
